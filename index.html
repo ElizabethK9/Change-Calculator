@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="Styles/site.css">
+</head>
+<body>
+    <div id="changeCalculator">
+        <h1>Change Calculator</h1>
+        <label for="amount">Enter amount of change due:</label>
+        <p id="Tip">Tip: You can input it as $1.22, 1.22 or 122 and it has same value, you can also do 22 cents and have it as the correct value</p>
+        <input type="text" id="amount" name="amount">
+        <button onclick="playSound(); makeChange(document.getElementById('amount').value)">Make Change</button>
+        <audio id = "Coins" >
+            <source src="MediaSounds/coin-payout-1-188227.mp3" type="audio/mpeg">
+        </audio>
+        <div id="result">
+            <p>Quarters: <span id="quarters"></span></p>
+            <p>Dimes: <span id="dimes"></span></p>
+            <p>Nickels: <span id="nickels"></span></p>
+            <p>Pennies: <span id="pennies"></span></p>
+        </div>
+    </div>
+</body>
+</html>
