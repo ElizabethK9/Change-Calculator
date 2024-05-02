@@ -12,7 +12,8 @@
     <div id="changeCalculator">
         <h1>Change Calculator</h1>
         <label for="amount">Enter amount of change due:</label>
-        <p id="Tip">Tip: You can input it as $1.22, 1.22 or 122 and it has same value, you can also do 22 cents and have it as the correct value</p>
+        <p id="Tip">Tip: You can input it as $1.22 or 1.22 it has same value, you can also do .22 
+            this will give you the result, however if you don't add the decimal, your calculation won't be correct.</p>
         <input type="text" id="amount" name="amount">
         <p id="amountError" class="error"></p>
         <button onclick="makeChange(document.getElementById('amount').value)">Make Change</button>
