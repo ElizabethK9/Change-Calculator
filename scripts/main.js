@@ -1,3 +1,12 @@
+class Change {
+    constructor(quarters, dimes, nickels, pennies) {
+        this.quarters = quarters;
+        this.dimes = dimes;
+        this.nickels = nickels;
+        this.pennies = pennies;
+    }
+}
+
 function calculateChange(cents) {
     var quarters = Math.floor(cents / 25);
     cents %= 25;
@@ -10,13 +19,9 @@ function calculateChange(cents) {
 
     var pennies = cents;
 
-    return {
-        quarters: quarters,
-        dimes: dimes,
-        nickels: nickels,
-        pennies: pennies
-    };
+    return new Change(quarters, dimes, nickels, pennies);
 }
+
 
 
 function parseAmount(amount) {
